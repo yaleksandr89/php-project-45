@@ -14,5 +14,8 @@
             "email": "y.aleksandr89@yandex.ru"
         }
     ],
-    "require": {}
+    "require": {},
+    "bin": [
+        "bin/brain-games.php"
+    ]
 }
