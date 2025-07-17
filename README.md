@@ -9,13 +9,25 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=yaleksandr89_php-project-45&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=yaleksandr89_php-project-45)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=yaleksandr89_php-project-45&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=yaleksandr89_php-project-45)
 
-## Демонстрация установки и игры
+---
 
-[![asciinema](https://asciinema.org/a/t1yEDjCJitjhqj2uOvm9RaQ7M.svg)](https://asciinema.org/a/t1yEDjCJitjhqj2uOvm9RaQ7M)
+## Демонстрация установки и игр
+
+### Brain Even
+
+[![asciinema brain-even](https://asciinema.org/a/t1yEDjCJitjhqj2uOvm9RaQ7M.svg)](https://asciinema.org/a/t1yEDjCJitjhqj2uOvm9RaQ7M)
 
 **В записи показаны:**
 - Установка зависимостей (`make install`)
 - Запуск игры (`make brain-even`)
+- Победа и поражение в игре
+
+### Brain Calc
+
+[![asciinema brain-calc](https://asciinema.org/a/57mMiIZiC1p8hdo22BY0KnO2A.svg)](https://asciinema.org/a/57mMiIZiC1p8hdo22BY0KnO2A)
+
+**В записи показаны:**
+- Запуск игры (`make brain-calc`)
 - Победа и поражение в игре
 
 ---
@@ -25,5 +37,6 @@
 ```sh
 make install      # Установка зависимостей
 make brain-even   # Запуск игры "Проверка на чётность"
+make brain-calc   # Запуск игры "Калькулятор"
 make lint         # Проверка кода линтером
 ```
