@@ -8,3 +8,22 @@
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=yaleksandr89_php-project-45&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=yaleksandr89_php-project-45)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=yaleksandr89_php-project-45&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=yaleksandr89_php-project-45)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=yaleksandr89_php-project-45&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=yaleksandr89_php-project-45)
+
+## Демонстрация установки и игры
+
+[![asciinema](https://asciinema.org/a/t1yEDjCJitjhqj2uOvm9RaQ7M.svg)](https://asciinema.org/a/t1yEDjCJitjhqj2uOvm9RaQ7M)
+
+**В записи показаны:**
+- Установка зависимостей (`make install`)
+- Запуск игры (`make brain-even`)
+- Победа и поражение в игре
+
+---
+
+## Используемые команды
+
+```sh
+make install      # Установка зависимостей
+make brain-even   # Запуск игры "Проверка на чётность"
+make lint         # Проверка кода линтером
+```
