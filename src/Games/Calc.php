@@ -4,10 +4,15 @@ declare(strict_types=1);
 
 namespace BrainGames\Games;
 
-use RuntimeException;
+use BrainGames\BrainGamesException;
+use Random\RandomException;
 
 use function BrainGames\runGame;
 
+/**
+ * @throws BrainGamesException
+ * @throws RandomException
+ */
 function runCalcGame(): void
 {
     $rule = 'What is the result of the expression?';
@@ -27,12 +32,15 @@ function runCalcGame(): void
     runGame($rule, $questionsAndAnswers);
 }
 
+/**
+ * @throws BrainGamesException
+ */
 function calculate(int $num1, int $num2, string $operation): int
 {
     return match ($operation) {
         '+' => $num1 + $num2,
         '-' => $num1 - $num2,
         '*' => $num1 * $num2,
-        default => throw new RuntimeException("Unknown operation: $operation"),
+        default => throw new BrainGamesException("Unknown operation: $operation"),
     };
 }
