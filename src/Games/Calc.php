@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace BrainGames\Games;
 
-use BrainGames\BrainGamesException;
+use Exception;
 use Random\RandomException;
 
 use function BrainGames\runGame;
 
 /**
- * @throws BrainGamesException
  * @throws RandomException
+ * @throws Exception
  */
 function runCalcGame(): void
 {
@@ -33,7 +33,7 @@ function runCalcGame(): void
 }
 
 /**
- * @throws BrainGamesException
+ * @throws Exception
  */
 function calculate(int $num1, int $num2, string $operation): int
 {
@@ -41,6 +41,6 @@ function calculate(int $num1, int $num2, string $operation): int
         '+' => $num1 + $num2,
         '-' => $num1 - $num2,
         '*' => $num1 * $num2,
-        default => throw new BrainGamesException("Unknown operation: $operation"),
+        default => throw new Exception("Unknown operation: $operation"),
     };
 }
