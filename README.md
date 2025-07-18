@@ -38,14 +38,23 @@
 - Запуск игры (`make brain-gcd`)
 - Победа и поражение в игре
 
+### Brain Progression
+
+[![asciinema brain-progression](https://asciinema.org/a/ew7o01xYgAtODnnnVzWu6KZdx.svg)](https://asciinema.org/a/ew7o01xYgAtODnnnVzWu6KZdx)
+
+**В записи показаны:**
+- Запуск игры (`make brain-progression`)
+- Победа и поражение в игре
+
 ---
 
 ## Используемые команды
 
 ```sh
-make install      # Установка зависимостей
-make brain-even   # Запуск игры "Проверка на чётность"
-make brain-calc   # Запуск игры "Калькулятор"
-make brain-gcd    # Запуск игры "НОД"
-make lint         # Проверка кода линтером
+make install              # Установка зависимостей
+make brain-even           # Запуск игры "Проверка на чётность"
+make brain-calc           # Запуск игры "Калькулятор"
+make brain-gcd            # Запуск игры "НОД"
+make brain-progression    # Запуск игры "Арифметическая прогрессия"
+make lint                 # Проверка кода линтером
 ```
