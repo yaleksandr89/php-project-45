@@ -30,6 +30,14 @@
 - Запуск игры (`make brain-calc`)
 - Победа и поражение в игре
 
+### Brain GCD
+
+[![asciinema brain-gcd](https://asciinema.org/a/Y9GgwPavhYTUxPmao71kELh8B.svg)](https://asciinema.org/a/Y9GgwPavhYTUxPmao71kELh8B)
+
+**В записи показаны:**
+- Запуск игры (`make brain-gcd`)
+- Победа и поражение в игре
+
 ---
 
 ## Используемые команды
@@ -38,5 +46,6 @@
 make install      # Установка зависимостей
 make brain-even   # Запуск игры "Проверка на чётность"
 make brain-calc   # Запуск игры "Калькулятор"
+make brain-gcd    # Запуск игры "НОД"
 make lint         # Проверка кода линтером
 ```
