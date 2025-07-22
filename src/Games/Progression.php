@@ -8,6 +8,8 @@ use Random\RandomException;
 
 use function BrainGames\runGame;
 
+use const BrainGames\ROUNDS_COUNT;
+
 const PROGRESSION_RULE = 'What number is missing in the progression?';
 
 /**
@@ -15,10 +17,9 @@ const PROGRESSION_RULE = 'What number is missing in the progression?';
  */
 function runProgressionGame(): void
 {
-    $roundsCount = 3;
     $questionsAndAnswers = [];
 
-    for ($i = 0; $i < $roundsCount; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $progressionLength = random_int(5, 10);
         $start = random_int(1, 30);
         $step = random_int(1, 10);
@@ -41,5 +42,6 @@ function buildProgression(int $start, int $step, int $length): array
     for ($i = 0; $i < $length; $i++) {
         $progression[] = $start + $i * $step;
     }
+
     return $progression;
 }
