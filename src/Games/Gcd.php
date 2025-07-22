@@ -8,16 +8,18 @@ use Random\RandomException;
 
 use function BrainGames\runGame;
 
+use const BrainGames\ROUNDS_COUNT;
+
+const GCD_RULE = 'Find the greatest common divisor of given numbers.';
+
 /**
  * @throws RandomException
  */
 function runGcdGame(): void
 {
-    $rule = 'Find the greatest common divisor of given numbers.';
-    $roundsCount = 3;
     $questionsAndAnswers = [];
 
-    for ($i = 0; $i < $roundsCount; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $num1 = random_int(1, 100);
         $num2 = random_int(1, 100);
         $question = "$num1 $num2";
@@ -25,7 +27,7 @@ function runGcdGame(): void
         $questionsAndAnswers[] = [$question, $answer];
     }
 
-    runGame($rule, $questionsAndAnswers);
+    runGame(GCD_RULE, $questionsAndAnswers);
 }
 
 function gcd(int $a, int $b): int

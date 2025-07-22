@@ -8,23 +8,25 @@ use Random\RandomException;
 
 use function BrainGames\runGame;
 
+use const BrainGames\ROUNDS_COUNT;
+
+const EVEN_RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 /**
  * @throws RandomException
  */
 function runEvenGame(): void
 {
-    $rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $roundsCount = 3;
     $questionsAndAnswers = [];
 
-    for ($i = 0; $i < $roundsCount; ++$i) {
+    for ($i = 0; $i < ROUNDS_COUNT; ++$i) {
         $number = random_int(0, 100);
         $question = (string)$number;
         $answer = isEven($number) ? 'yes' : 'no';
         $questionsAndAnswers[] = [$question, $answer];
     }
 
-    runGame($rule, $questionsAndAnswers);
+    runGame(EVEN_RULE, $questionsAndAnswers);
 }
 
 function isEven(int $number): bool

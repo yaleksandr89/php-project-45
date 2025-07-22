@@ -9,18 +9,20 @@ use Random\RandomException;
 
 use function BrainGames\runGame;
 
+use const BrainGames\ROUNDS_COUNT;
+
+const CALC_RULE = 'What is the result of the expression?';
+
 /**
  * @throws RandomException
  * @throws Exception
  */
 function runCalcGame(): void
 {
-    $rule = 'What is the result of the expression?';
     $questionsAndAnswers = [];
     $operations = ['+', '-', '*'];
-    $roundsCount = 3;
 
-    for ($i = 0; $i < $roundsCount; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $num1 = random_int(1, 50);
         $num2 = random_int(1, 50);
         $operation = $operations[array_rand($operations)];
@@ -29,7 +31,7 @@ function runCalcGame(): void
         $questionsAndAnswers[] = [$question, $answer];
     }
 
-    runGame($rule, $questionsAndAnswers);
+    runGame(CALC_RULE, $questionsAndAnswers);
 }
 
 /**
