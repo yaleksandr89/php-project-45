@@ -9,13 +9,14 @@ use Random\RandomException;
 
 use function BrainGames\runGame;
 
+const CALC_RULE = 'What is the result of the expression?';
+
 /**
  * @throws RandomException
  * @throws Exception
  */
 function runCalcGame(): void
 {
-    $rule = 'What is the result of the expression?';
     $questionsAndAnswers = [];
     $operations = ['+', '-', '*'];
     $roundsCount = 3;
@@ -29,7 +30,7 @@ function runCalcGame(): void
         $questionsAndAnswers[] = [$question, $answer];
     }
 
-    runGame($rule, $questionsAndAnswers);
+    runGame(CALC_RULE, $questionsAndAnswers);
 }
 
 /**

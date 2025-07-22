@@ -8,12 +8,13 @@ use Random\RandomException;
 
 use function BrainGames\runGame;
 
+const PRIME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 /**
  * @throws RandomException
  */
 function runPrimeGame(): void
 {
-    $rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $roundsCount = 3;
     $questionsAndAnswers = [];
 
@@ -24,7 +25,7 @@ function runPrimeGame(): void
         $questionsAndAnswers[] = [$question, $answer];
     }
 
-    runGame($rule, $questionsAndAnswers);
+    runGame(PRIME_RULE, $questionsAndAnswers);
 }
 
 function isPrime(int $n): bool
